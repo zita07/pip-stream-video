@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture in Picture</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Picture in Picture</h1>
+      <h3>
+        <button id="tip" title="Tip">
+          <a class="button" href="#popup">💡</a>
+        </button>
+      </h3>
+      <h2>Only works best in Chrome</h2>
+    </div>
+
+    <!-- Video -->
+    <video id="video" height="360" width="640" hidden controls></video>
+    <!-- Button -->
+    <div class="button-container">
+      <button id="select-share-screen-button">
+        <img src="./minimize-video.png" />
+        <p>Start PiP</p>
+      </button>
+
+      <button id="stop-capture-button" hidden>
+        <img
+          src="./visibility.png"
+        />
+        <p>Close PiP</p>
+      </button>
+    </div>
+    <div id="popup" class="overlay">
+      <div class="popup">
+        <h2>How it Works</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <h4>1. Click Start Picture in Picture mode</h4>
+          <h4>2. Select the video source to stream</h4>
+          <h4>3. Adjust the height and the width</h4>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
